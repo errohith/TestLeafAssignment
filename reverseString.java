@@ -1,17 +1,18 @@
-package string;
+package assignment;
 
 public class reverseString {
-		
-	    public String reverse(String str) 
-	    {     
-	        if ((str==null)||(str.length() <= 1) )
-	            return str;
-	        return reverse(str.substring(1)) + str.charAt(0);
+
+	public static void main(String[] args) {
+		String text = "Welcome";
+		int j = text.length();
+		char[] charArray = text.toCharArray();
+		//System.out.println(charArray[1]);
+		String a = "";
+		for(int i=j-1;i>=0;i--)
+		{
+			a = a+(charArray[i]);
 	    }
-	    public static void main(String[] args) 
-	    {
-	    	reverseString obj=new reverseString();
-	    	String str = "Welcome";
-	        System.out.println("Reverse of \'"+str+"\' is \'"+obj.reverse(str)+"\'");    
-	    }    
+		System.out.println(a);
+
 	}
+}
